@@ -1,0 +1,88 @@
+@font-face {
+	font-family: "Open Sans";
+	font-weight: 400;
+	font-style: normal;
+	src: local("Open Sans"), local("OpenSans-Regular"),
+	url("../fonts/opensans.woff2") format("woff2"),
+	url("../fonts/opensans.woff") format("woff");
+}
+
+@font-face {
+	font-family: "Open Sans Light";
+	font-weight: 400;
+	font-style: normal;
+	src: local("Open Sans Light"), local("OpenSans-Light"),
+	url("../fonts/opensanslight.woff2") format("woff2"),
+	url("../fonts/opensanslight.woff") format("woff");
+}
+
+@font-face {
+	font-family: "Gilroy Light";
+	font-weight: 400;
+	font-style: normal;
+	src: local("Gilroy Light"), local("Gilroy-Light"),
+	url("../fonts/gilroylight.woff2") format("woff2"),
+	url("../fonts/gilroylight.woff") format("woff");
+}
+
+@font-face {
+	font-family: "Gilroy Extra Bold";
+	font-weight: 400;
+	font-style: normal;
+	src: local("Gilroy Extra Bold"), local("Gilroy-Extra-Bold"),
+	url("../fonts/gilroyextrabold.woff2") format("woff2"),
+	url("../fonts/gilroyextrabold.woff") format("woff");
+}
+
+*, *::before, *::after {
+	box-sizing: inherit;
+}
+
+a {
+	text-decoration: none;
+}
+
+ul {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+
+img {
+	max-width: 100%;
+	height: auto;
+}
+
+body {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: "Open Sans Light", "Arial", sans-serif;
+	font-size: 15px;
+	line-height: 30px;
+	font-weight: 400;
+	color: #464646;
+	background-color: #fff;
+}
+
+.container {
+	width: 1160px;
+	margin: 0 auto;
+	padding: 0 10px;
+}
+
+.visually-hidden:not(:focus):not(:active),
+input[type="checkbox"].visually-hidden,
+input[type="radio"].visually-hidden {
+	position: absolute;
+	width: 1px;
+	height: 1px;
+	margin: -1px;
+	border: 0;
+	padding: 0;
+	white-space: nowrap;
+	-webkit-clip-path: inset(100%);
+			clip-path: inset(100%);
+	clip: rect(0 0 0 0);
+	overflow: hidden;
+}
