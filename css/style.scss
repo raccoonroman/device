@@ -267,8 +267,9 @@ input[type="radio"].visually-hidden {
 
 		button {
 			position: relative;
+			min-width: 85px;
+			height: 50px;
 			font-size: 15px;
-			padding: 16px 21px;
 			color: inherit;
 			background-color: transparent;
 			border: none;
@@ -450,7 +451,7 @@ input[type="radio"].visually-hidden {
 	top: 22px;
 	left: -60px;
 	width: 1160px;
-	height: 130px;
+	height: 168px;
 	background-color: #f7e296;
 	z-index: 2;
 }
@@ -459,16 +460,18 @@ input[type="radio"].visually-hidden {
 	position: absolute;
 	display: none;
 	flex-wrap: wrap;
+	align-content: flex-start;
 	top: 22px;
 	left: -60px;
-	width: 700px;
-	height: 130px;
+	width: 712px;
+	height: 168px;
 	padding-top: 30px;
 	padding-left: 60px;
 	z-index: 3;
 
 	.index-subnav-item {
-		width: 200px;
+		margin-bottom: 5px;
+		width: 204px;
 
 		&:nth-child(1),
 		&:nth-child(4),
@@ -479,6 +482,132 @@ input[type="radio"].visually-hidden {
 		&:nth-last-child {
 			width: 100%;
 		}
+	}
+}
+
+.slider {
+	position: relative;
+	background-image: linear-gradient(#f7e296 113px, #fff 113px);
+}
+
+.slider-controls {
+	position: absolute;
+	display: flex;
+	justify-content: space-between;
+	top: -20px;
+	right: 60px;
+	width: 78px;
+	height: 12px;
+	z-index: 2;
+
+	i {
+		position: relative;
+		width: 14px;
+		height: 14px;
+		background-color: #fff;
+		border: 1px solid #000;
+		border-radius: 50%;
+		cursor: pointer;
+	}
+
+	i.active::after {
+		content: "";
+		position: absolute;
+		top: 3px;
+		left: 3px;
+		width: 6px;
+		height: 6px;
+		border: 1px solid #000;
+		border-radius: 50%;
+	}
+}
+
+.slider-item {
+	display: flex;
+	position: relative;
+	padding-left: 27px;
+	z-index: 1;
+
+	&::before {
+		content: "";
+		position: absolute;
+		top: 38px;
+		left: 600px;
+		width: 100px;
+		height: 7px;
+		background-color: #fff;
+	}
+
+	&::after {
+		position: absolute;
+		top: -13px;
+		right: 48px;
+		font-family: "Gilroy Extra Bold", "Arial", sans-serif;
+		font-size: 179.2px;
+		line-height: 179.2px;
+		color: #fff;
+		z-index: -1;
+	}
+
+	&:nth-child(1)::after {
+		content: "01";
+	}
+
+	&:nth-child(2)::after {
+		content: "02";
+	}
+
+	&:nth-child(3)::after {
+		content: "03";
+	}
+
+	img {
+		margin: 0 auto;
+		align-self: center;
+		overflow: hidden;
+	}
+
+	.slider-item-info {
+		margin-left: auto;
+		padding-top: 81px;
+		width: 560px;
+	}
+
+	p {
+		margin: 0;
+	}
+
+	.slogan {
+		margin-bottom: 19px;
+		font-family: "Gilroy Extra Bold", "Arial", sans-serif;
+		font-size: 47px;
+		line-height: 56px;
+		letter-spacing: .5px;
+		color: #000;
+	}
+
+	p:nth-child(2) {
+		margin-bottom: 43px;
+	}
+
+	.slider-item-btn {
+		margin-bottom: 47px;
+	}
+
+	th {
+		text-align: left;
+		width: 146px;
+		font-size: 13px;
+		line-height: 20px;
+		font-weight: inherit;
+	}
+
+	td {
+		padding-bottom: 4px;
+		font-family: "Gilroy Light", "Arial", sans-serif;
+		font-size: 36px;
+		line-height: 48px;
+		color: #000;
 	}
 }
 
