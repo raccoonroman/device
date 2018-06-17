@@ -664,7 +664,7 @@ input[type="radio"].visually-hidden {
 }
 
 .services {
-	margin-bottom: 50px;
+	margin-bottom: 94px;
 	padding-bottom: 69px;
 	background-image: linear-gradient(#fff 100px, #e5e5e5 100px);
 }
@@ -774,6 +774,31 @@ input[type="radio"].visually-hidden {
 
 	p {
 		width: 430px;
+	}
+}
+
+.manufacturers-list {
+	display: flex;
+	flex-wrap: wrap;
+	margin-left: -40px;
+	margin-bottom: 53px;
+}
+
+.manufacturer-item {
+	margin: 0 0 40px 40px;
+
+	.manufacturer-link {
+		width: 260px;
+		height: 100px;
+		filter: grayscale(1);
+		opacity: .2;
+		transition: filter .4s, opacity .4s;
+
+		&:hover,
+		&:focus {
+			opacity: 1;
+			filter: none;
+		}
 	}
 }
 
