@@ -63,8 +63,10 @@
 			</ul>
 		</nav>
 	</header>
-
-	<main>
+</div>
+	
+<main>
+	<div class="container">
 		<section class="slider">
 			<h2 class="visually-hidden">Слайдер</h2>
 			<div class="slider-controls">
@@ -183,9 +185,37 @@
 				</li>
 			</ul>
 		</section>
-	</main>
+	</div>
 
-</div>
+	<section class="services">
+		<div class="container">
+			<h2 class="visually-hidden">Сервисы</h2>
+			<div class="services-slider">
+				<div class="services-btns">
+					<button class="btn services-btn" type="button" onclick="serviceSlide(1)">Доставка</button>
+					<button class="btn services-btn" type="button" onclick="serviceSlide(2)">Гарантия</button>
+					<button class="btn services-btn" type="button" onclick="serviceSlide(3)">Кредит</button>
+				</div>
+
+				<ul class="services-slider-list">
+					<li class="services-slider-item services-delivery fade">
+						<h3>Доставка</h3>
+						<p>Мы с удовольствием доставим ваш товар прямо к вашему подъезду совершенно бесплатно! Ведь мы неплохо заработаем, поднимая его на ваш этаж.</p>
+					</li>
+					<li class="services-slider-item services-guarantee fade">
+						<h3>Гарантия</h3>
+						<p>Если из-за возгорания купленного у нас товара у вас сгорит дом — не переживайте, мы выдадим вам новый.<br>Товар, не дом, конечно же.</p>
+					</li>
+					<li class="services-slider-item services-credit fade">
+						<h3>Кредит</h3>
+						<p>Залезть в долговую яму стало проще! Кредитные консультанты подберут для вас наиболее выгодные условия кредита. Выгодные для нашего банка, разумеется.</p>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</section>
+</main>
+
 <script>document.write('<script src="http://' + (location.host || 'localhost').split(':')[0] + ':35729/livereload.js?snipver=1"></' + 'script>')</script>
 <script src="js/script.js"></script>
 </body>

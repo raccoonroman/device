@@ -24,6 +24,11 @@
 @keyframes lineHeight {
   to {
     height: 100%; } }
+@keyframes fade {
+  from {
+    opacity: .4; }
+  to {
+    opacity: 1; } }
 *, *::before, *::after {
   box-sizing: inherit; }
 
@@ -84,7 +89,8 @@ input[type="radio"].visually-hidden {
   background-color: transparent;
   border: none;
   letter-spacing: 3.6px;
-  cursor: pointer; }
+  cursor: pointer;
+  z-index: 1; }
   .btn::before {
     content: "";
     position: absolute;
@@ -173,7 +179,7 @@ input[type="radio"].visually-hidden {
   display: flex;
   align-items: center;
   margin-top: -15px;
-  margin-bottom: 27px; }
+  margin-bottom: 26px; }
   .user-nav .form-search {
     position: relative;
     margin-right: 100px;
@@ -351,7 +357,7 @@ input[type="radio"].visually-hidden {
   position: absolute;
   display: flex;
   justify-content: space-between;
-  top: 328px;
+  top: 329px;
   right: 83px;
   width: 78px;
   height: 12px;
@@ -377,7 +383,7 @@ input[type="radio"].visually-hidden {
 
 .slider-list {
   min-height: 592px;
-  padding-bottom: 106px; }
+  padding-bottom: 108px; }
 
 .slider-item {
   display: flex;
@@ -425,7 +431,8 @@ input[type="radio"].visually-hidden {
     letter-spacing: .5px;
     color: #000; }
   .slider-item p:nth-child(2) {
-    margin-bottom: 43px; }
+    margin-bottom: 43px;
+    letter-spacing: .2px; }
   .slider-item .slider-item-btn {
     margin-bottom: 47px; }
   .slider-item th {
@@ -444,23 +451,112 @@ input[type="radio"].visually-hidden {
 .popular-list {
   display: flex;
   justify-content: space-between;
-  margin-bottom: 80px; }
+  margin-bottom: 81px; }
 
 .popular-item {
   width: 160px; }
+  .popular-item a:hover .popular-item-img,
+  .popular-item a:focus .popular-item-img {
+    background-color: #f0c52e; }
+  .popular-item a:active .popular-item-img img,
+  .popular-item a:active .popular-item-title {
+    opacity: .3; }
   .popular-item .popular-item-img {
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-bottom: 34px;
+    margin-bottom: 33px;
     width: 100%;
     height: 160px;
-    background-color: rgba(240, 197, 46, 0.5); }
+    background-color: rgba(240, 197, 46, 0.5);
+    transition: background-color .25s; }
   .popular-item .popular-item-title {
     margin: 0;
     font-family: "Gilroy Extra Bold", "Arial", sans-serif;
     font-size: 18px;
     line-height: 24px;
     color: #000; }
+
+.services {
+  margin-bottom: 50px;
+  padding-bottom: 69px;
+  background-image: linear-gradient(#fff 100px, #e5e5e5 100px); }
+
+.services-slider {
+  display: flex; }
+
+.services-btns {
+  position: relative;
+  min-width: 285px;
+  margin-top: 80px;
+  margin-right: 115px; }
+  .services-btns::after {
+    position: absolute;
+    content: "";
+    top: -80px;
+    right: 1px;
+    width: 7px;
+    height: 319px;
+    background-color: #000; }
+  .services-btns .services-btn {
+    display: block;
+    margin-bottom: 24px;
+    width: 160px;
+    padding: 8px 0;
+    text-align: center; }
+    .services-btns .services-btn::after {
+      content: "";
+      position: absolute;
+      top: 40%;
+      left: 160px;
+      width: 0;
+      height: 20%;
+      background-color: #000;
+      transition: width .2s; }
+  .services-btns .services-btn:focus {
+    outline: none; }
+  .services-btns .services-btn.active {
+    color: #f7e184; }
+  .services-btns .services-btn.active::before {
+    top: 0;
+    height: 100%;
+    background-color: #000; }
+  .services-btns .services-btn.active::after {
+    top: 0;
+    height: 40px;
+    width: 118px; }
+
+.services-slider-list {
+  flex-grow: 1; }
+
+.services-slider-item {
+  padding-top: 82px;
+  padding-bottom: 77px; }
+  .services-slider-item h3 {
+    margin: 0;
+    margin-bottom: 40px;
+    font-family: "Gilroy Extra Bold", "Arial", sans-serif;
+    font-size: 47px;
+    line-height: auto;
+    color: #000;
+    letter-spacing: 1px; }
+  .services-slider-item p {
+    margin: 0;
+    letter-spacing: .25px; }
+
+.services-delivery {
+  background: url(../img/icons/delivery.svg) right 67px top 85px no-repeat; }
+  .services-delivery p {
+    width: 430px; }
+
+.services-guarantee {
+  background: url(../img/icons/guarantee.svg) right 67px top 85px no-repeat; }
+  .services-guarantee p {
+    width: 480px; }
+
+.services-credit {
+  background: url(../img/icons/credit.svg) right 67px top 85px no-repeat; }
+  .services-credit p {
+    width: 430px; }
 
 /*# sourceMappingURL=style.css.map */
