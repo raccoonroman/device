@@ -36,3 +36,30 @@ function showServicesSlides(n) {
 	servicesSlides[slideIndex-1].style.display = "block"; 
 	servicesBtns[slideIndex-1].className += " active";
 }
+
+
+// var catalogInnerInit = document.querySelector('.catalog-link');
+// var substrate = document.querySelector('.substrate');
+// var indexSubnavList = document.querySelector('.index-subnav-list');
+// var catalogInnerLink = document.getElementsByClassName('subnav-link');
+
+// catalogInnerInit.addEventListener('focus', function () {
+// 	substrate.style.display = "block";
+// 	indexSubnavList.style.display = "flex";
+// });
+
+// for (var i = 0; i < catalogInnerLink.length; i++) {
+// 		catalogInnerLink[i].addEventListener('focus', function (evt) {
+// 			evt.preventDefault();
+// 			substrate.style.display = "block";
+// 			indexSubnavList.style.display = "flex";
+// 	});
+// }
+
+// for (var i = 0; i < catalogInnerLink.length; i++) {
+// 		catalogInnerLink[i].addEventListener('blur', function (evt) {
+// 			evt.preventDefault();
+// 			substrate.style.display = "none";
+// 			indexSubnavList.style.display = "none";
+// 	});
+// }

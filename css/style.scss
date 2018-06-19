@@ -34,8 +34,13 @@
 	url("../fonts/gilroyextrabold.woff") format("woff");
 }
 
-@keyframes lineWidth { to { width: 100%; } }
-@keyframes lineHeight { to { height: 100%; } }
+@keyframes lineWidth { 
+	to { width: 100%; } 
+}
+
+@keyframes lineHeight { 
+	to { height: 100%; } 
+}
 
 @keyframes fade {
 	from { opacity: .4; } 
@@ -77,6 +82,11 @@ body {
 	width: 1180px;
 	margin: 0 auto;
 	padding: 0 10px;
+}
+
+.fade {
+	animation-name: fade;
+	animation-duration: 1s;
 }
 
 .visually-hidden:not(:focus):not(:active),
@@ -155,7 +165,6 @@ input[type="radio"].visually-hidden {
 	font-size: 48px;
 	line-height: 48px;
 	transition: opacity .25s;
-	color: #000;
 	letter-spacing: .5px;
 
 	&[href]:hover,
@@ -166,6 +175,14 @@ input[type="radio"].visually-hidden {
 	&[href]:active {
 		opacity: .3;
 	}
+}
+
+.header-logo {
+	color: #000;
+}
+
+.footer-logo {
+	color: #ffc600;
 }
 
 .modal-close {
@@ -314,6 +331,10 @@ input[type="radio"].visually-hidden {
 			transition: opacity .4s .25s;
 		}
 
+		button:focus {
+			opacity: 1;
+		}
+
 		.line-wrap span {
 			display: block;
 			position: absolute;
@@ -406,11 +427,19 @@ input[type="radio"].visually-hidden {
 	&:nth-child(1) {
 		position: relative;
 
-		&:hover .substrate {
+		&:hover > .substrate {
 			display: block;
 		}
 
-		&:hover .index-subnav-list {
+		&:focus-within > .substrate {
+			display: block;
+		}
+
+		&:hover > .index-subnav-list {
+			display: flex;
+		}
+
+		&:focus-within > .index-subnav-list {
 			display: flex;
 		}
 
@@ -454,10 +483,10 @@ input[type="radio"].visually-hidden {
 .substrate {
 	position: absolute;
 	display: none;
-	top: 22px;
+	top: 30px;
 	left: -60px;
 	width: 1160px;
-	height: 168px;
+	height: 160px;
 	background-color: #f7e296;
 	z-index: 2;
 }
@@ -503,26 +532,26 @@ input[type="radio"].visually-hidden {
 	top: 329px;
 	right: 83px;
 	width: 78px;
-	height: 12px;
+	height: 14px;
 	z-index: 2;
 
-	i {
+	.dot {
 		position: relative;
-		width: 12px;
-		height: 12px;
+		width: 14px;
+		height: 14px;
 		background-color: #fff;
 		border: 1px solid #000;
 		border-radius: 50%;
 		cursor: pointer;
 	}
 
-	i.active::after {
+	.dot.active::after {
 		content: "";
 		position: absolute;
 		top: 50%;
 		left: 50%;
-		width: 5px;
-		height: 5px;
+		width: 6px;
+		height: 6px;
 		border: 1px solid #000;
 		border-radius: 50%;
 		transform: translate(-50%, -50%);
@@ -911,3 +940,64 @@ input[type="radio"].visually-hidden {
 	}
 }
 
+.index-footer {
+	background-color: #464646;
+}
+
+.user-nav-footer {
+	display: flex;
+}
+
+.user-nav-footer {
+
+	a:not(.footer-logo) {
+		position: relative;
+		color: rgba(255, 255, 255, .7);
+
+		&:hover,
+		&:focus {
+			color: #fff;
+		}
+
+		&:active {
+			color: rgba(255, 255, 255, .3);
+		}
+
+		&::before {
+			position: absolute;
+			top: 0;
+			left: 0;
+		}
+	}
+
+	.user-nav-login {
+		padding-left: 26px;
+
+		&::before {
+			content: url(../img/icons/user-yellow.svg);
+			width: 13px;
+			height: 12px;
+		}
+	}
+
+	.user-nav-compare {
+		padding-left: 20px;
+
+		&::before {
+			content: url(../img/icons/compare-yellow.svg);
+			width: 10px;
+			height: 10px;
+		}
+	}
+
+	.user-nav-cart {
+		margin-left: 42px;
+		padding-left: 23px;
+
+		&::before {
+			content: url(../img/icons/cart-yellow.svg);
+			width: 12px;
+			height: 12px;
+		}
+	}
+}

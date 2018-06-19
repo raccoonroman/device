@@ -10,7 +10,7 @@
 <div class="container">
 	<header class="index-header">
 		<h1 class="index-title">
-			<a class="logo">Device</a>
+			<a class="logo header-logo">Device</a>
 		</h1>
 		<nav class="user-nav">
 			<form class="form-search" action="https://echo.htmlacademy.ru" method="get" target="_blank">
@@ -28,26 +28,26 @@
 		<nav class="index-nav">
 			<ul class="index-nav-list">
 				<li class="index-nav-item">
-					<a class="link" href="#">Каталог товаров</a>
+					<a class="link catalog-link" href="#">Каталог товаров</a>
 					<div class="substrate"></div>
 					<ul class="index-subnav-list">
 						<li class="index-subnav-item">
-							<a class="link" href="#">Виртуальная реальность</a>
+							<a class="link subnav-link" href="#">Виртуальная реальность</a>
 						</li>
 						<li class="index-subnav-item">
-							<a class="link" href="#">Фитнес-браслеты</a>
+							<a class="link subnav-link" href="#">Фитнес-браслеты</a>
 						</li>
 						<li class="index-subnav-item">
-							<a class="link" href="#">Квадрокоптеры</a>
+							<a class="link subnav-link" href="#">Квадрокоптеры</a>
 						</li>
 						<li class="index-subnav-item">
-							<a class="link" href="selfies-monopods.html">Моноподы для селфи</a>
+							<a class="link subnav-link" href="selfies-monopods.html">Моноподы для селфи</a>
 						</li>
 						<li class="index-subnav-item">
-							<a class="link" href="#">Умные часы</a>
+							<a class="link subnav-link" href="#">Умные часы</a>
 						</li>
 						<li class="index-subnav-item">
-							<a class="link" href="#">Экшн-камеры</a>
+							<a class="link subnav-link" href="#">Экшн-камеры</a>
 						</li>
 					</ul>
 				</li>
@@ -70,9 +70,9 @@
 		<section class="slider">
 			<h2 class="visually-hidden">Слайдер</h2>
 			<div class="slider-controls">
-				<i class="dot" onclick="slide(1)"></i>
-				<i class="dot" onclick="slide(2)"></i>
-				<i class="dot" onclick="slide(3)"></i>
+				<button class="dot" type="button" onclick="slide(1)"></button>
+				<button class="dot" type="button" onclick="slide(2)"></button>
+				<button class="dot" type="button" onclick="slide(3)"></button>
 			</div>
 			<ul class="slider-list">
 				<li class="slider-item fade">
@@ -266,10 +266,23 @@
 			</section>
 		</div>
 	</div>
-	</div>
 </main>
 
-<script>document.write('<script src="http://' + (location.host || 'localhost').split(':')[0] + ':35729/livereload.js?snipver=1"></' + 'script>')</script>
+<footer class="index-footer">
+	<div class="container">
+		<div class="footer-top">
+			<nav class="user-nav-footer">
+				<a class="logo footer-logo" href="index.html">Device</a>
+				<a href="#" class="user-nav-login">Войти</a>
+				<a href="#" class="user-nav-compare">Сравнить</a>
+				<a href="#" class="user-nav-cart">Корзина</a>
+			</nav>
+		</div>
+		<div class="footer-middle"></div>
+		<div class="footer-bottom"></div>
+	</div>
+</footer>
+
 <script src="js/script.js"></script>
 </body>
 </html>
