@@ -1209,11 +1209,6 @@ input[type="radio"].visually-hidden {
 	z-index: 2;
 }
 
-.modal-feedback-show {
-	display: block;
-	animation: jelly 1s linear both;
-}
-
 .modal-feedback-error {
 	animation-name: shake;
 	animation-duration: 0.6s;
@@ -1318,4 +1313,36 @@ input[type="radio"].visually-hidden {
 	textarea::placeholder {
 		color: rgba(70, 70, 70, .4);
 	}
+}
+
+.modal-map {
+	position: fixed;
+	display: none;
+	top: 50px;
+	left: 50%;
+	margin-left: -480px;
+	width: 960px;
+	height: 559px;
+	background-color: #eaeaea;
+	box-shadow: 0 10px 20px rgba(4, 6, 6, 0.2);
+	z-index: 2;
+
+	iframe {
+		position: relative;
+		z-index: 4;
+		border: none;
+	}
+
+	img {
+		position: absolute;
+		top: 0;
+		left: 0;
+		z-index: 3;
+	}
+}
+
+.modal-feedback-show,
+.modal-map-show {
+	display: block;
+	animation: jelly 1s linear both;
 }
