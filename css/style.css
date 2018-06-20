@@ -351,12 +351,12 @@ input[type="radio"].visually-hidden {
     -webkit-transform: rotate(315deg);
     transform: rotate(315deg); }
 
-.index-header {
+.page-header {
   margin-top: 40px;
   padding: 0 60px 47px 60px;
   background-color: rgba(240, 197, 46, 0.5); }
 
-.index-title {
+.header-title {
   margin: 0;
   transform: translate(-2px, -24px); }
 
@@ -451,13 +451,20 @@ input[type="radio"].visually-hidden {
       position: absolute;
       top: 0;
       left: 0; }
-  .user-nav .user-nav-login {
-    margin-right: auto;
+  .user-nav .user-nav-login,
+  .user-nav .user-nav-name {
     padding-left: 26px; }
-    .user-nav .user-nav-login::before {
+    .user-nav .user-nav-login::before,
+    .user-nav .user-nav-name::before {
       content: url(../img/icons/user.svg);
       width: 13px;
       height: 12px; }
+  .user-nav .user-nav-login,
+  .user-nav .user-nav-logout {
+    margin-right: auto; }
+  .user-nav .user-nav-logout {
+    margin-left: 20px;
+    color: rgba(0, 0, 0, 0.3); }
   .user-nav .user-nav-compare {
     padding-left: 20px; }
     .user-nav .user-nav-compare::before {
@@ -1072,5 +1079,30 @@ input[type="radio"].visually-hidden {
 .modal-map-show {
   display: block;
   animation: jelly 1s linear both; }
+
+.selfies-monopods-title {
+  margin: 36px 60px 20px;
+  font-family: "Gilroy Extra Bold", "Arial", sans-serif;
+  font-size: 47px;
+  line-height: 48px;
+  color: #000;
+  letter-spacing: .5px; }
+
+.breadcrumbs {
+  display: flex;
+  margin: 0 60px; }
+  .breadcrumbs a {
+    font-size: 14px;
+    line-height: 24px;
+    color: rgba(0, 0, 0, 0.3); }
+    .breadcrumbs a[href]:hover, .breadcrumbs a[href]:focus {
+      color: rgba(0, 0, 0, 0.6); }
+    .breadcrumbs a[href]:active {
+      color: rgba(0, 0, 0, 0.1); }
+  .breadcrumbs li:not(.breadcrumb-current)::after {
+    content: url(../img/icons/nav-arrow.svg);
+    width: 4px;
+    height: 7px;
+    margin: 0 17px; }
 
 /*# sourceMappingURL=style.css.map */
