@@ -1181,7 +1181,8 @@ input[type="radio"].visually-hidden {
 
 .form-filter {
   width: 269px;
-  padding-right: 68px; }
+  padding-right: 69px;
+  padding-top: 69px; }
 
 .filter-item {
   margin: 0;
@@ -1191,6 +1192,7 @@ input[type="radio"].visually-hidden {
   padding-top: 10px; }
   .filter-item .filter-item-title {
     margin: 0;
+    margin-bottom: 18px;
     font-family: "Gilroy Extra Bold", "Arial", sans-serif;
     font-size: 18px;
     line-height: 24px;
@@ -1198,7 +1200,7 @@ input[type="radio"].visually-hidden {
 
 .range-controls {
   position: relative;
-  padding: 35px 0 8px; }
+  padding: 17px 0 8px; }
   .range-controls .scale {
     height: 2px;
     background-color: #dbdbdb; }
@@ -1208,7 +1210,7 @@ input[type="radio"].visually-hidden {
       background: #91c92f; }
   .range-controls .toggle {
     position: absolute;
-    top: 25px;
+    top: 7px;
     left: 0;
     width: 20px;
     height: 20px;
@@ -1222,12 +1224,13 @@ input[type="radio"].visually-hidden {
       -webkit-transform: scale(1.15);
       transform: scale(1.15); }
   .range-controls .toggle-min {
-    left: -5px; }
+    left: -6px; }
   .range-controls .toggle-max {
-    left: 105px; }
+    left: 107px; }
 
 .price-controls {
-  display: flex; }
+  display: flex;
+  margin-bottom: 33px; }
   .price-controls label {
     width: 90px;
     font-family: "Gilroy Light", "Arial", sans-serif;
@@ -1241,55 +1244,112 @@ input[type="radio"].visually-hidden {
     background-color: transparent;
     color: rgba(0, 0, 0, 0.2); }
 
-.filter-item-color label {
-  position: relative;
-  display: block;
-  padding-left: 40px;
-  font-size: 14px;
-  line-height: 40px;
-  color: #000;
-  cursor: pointer; }
-.filter-item-color input + label::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 23px;
-  height: 23px;
-  border: 2px solid #000;
-  border-radius: 3px; }
-.filter-item-color input:checked + label::after {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 27px;
-  height: 23px;
-  background: url(../img/icons/checkbox-on.svg) no-repeat; }
-.filter-item-color input:checked + label::before,
-.filter-item-color input:checked + label:hover::before,
-.filter-item-color input:checked:focus + label::before {
-  border-color: transparent; }
-.filter-item-color label:hover::before,
-.filter-item-color input:focus + label::before {
-  border-color: rgba(0, 0, 0, 0.6); }
-.filter-item-color input:checked + label:hover::after,
-.filter-item-color input:checked:focus + label::after {
-  opacity: .6; }
-.filter-item-color label:active::before {
-  border-color: #000; }
-.filter-item-color input:checked + label:active::after {
-  opacity: 1; }
-.filter-item-color input:disabled + label {
-  color: rgba(0, 0, 0, 0.4);
-  cursor: default; }
-.filter-item-color input:disabled + label {
-  color: #a6a6a6; }
-.filter-item-color input:disabled + label::before {
-  border-color: rgba(0, 0, 0, 0.25); }
-.filter-item-color input:checked:disabled + label::before {
-  border-color: transparent; }
-.filter-item-color input:checked:disabled + label::after {
-  opacity: 0.25; }
+.filter-item-color {
+  margin-bottom: 31px; }
+  .filter-item-color label {
+    position: relative;
+    display: block;
+    padding-left: 39px;
+    font-size: 14px;
+    line-height: 40px;
+    color: #000;
+    cursor: pointer; }
+  .filter-item-color input + label::before {
+    content: "";
+    position: absolute;
+    top: 8px;
+    left: -2px;
+    width: 23px;
+    height: 23px;
+    border: 2px solid #000;
+    border-radius: 3px; }
+  .filter-item-color input:checked + label::after {
+    content: "";
+    position: absolute;
+    top: 8px;
+    left: -2px;
+    width: 27px;
+    height: 23px;
+    background: url(../img/icons/checkbox-on.svg) no-repeat; }
+  .filter-item-color input:checked + label::before,
+  .filter-item-color input:checked + label:hover::before,
+  .filter-item-color input:checked:focus + label::before {
+    border-color: transparent; }
+  .filter-item-color label:hover::before,
+  .filter-item-color input:focus + label::before {
+    border-color: rgba(0, 0, 0, 0.6); }
+  .filter-item-color input:checked + label:hover::after,
+  .filter-item-color input:checked:focus + label::after {
+    opacity: .6; }
+  .filter-item-color label:active::before {
+    border-color: #000; }
+  .filter-item-color input:checked + label:active::after {
+    opacity: 1; }
+  .filter-item-color input:disabled + label {
+    color: rgba(0, 0, 0, 0.4);
+    cursor: default; }
+  .filter-item-color input:disabled + label {
+    color: #a6a6a6; }
+  .filter-item-color input:disabled + label::before {
+    border-color: rgba(0, 0, 0, 0.25); }
+  .filter-item-color input:checked:disabled + label::before {
+    border-color: transparent; }
+  .filter-item-color input:checked:disabled + label::after {
+    opacity: 0.25; }
+
+.filter-item-bluetooth {
+  margin-bottom: 31px; }
+  .filter-item-bluetooth .filter-item-title {
+    margin-bottom: 18px; }
+  .filter-item-bluetooth label {
+    position: relative;
+    display: block;
+    padding-left: 38px;
+    font-size: 14px;
+    line-height: 40px;
+    color: #000;
+    cursor: pointer; }
+  .filter-item-bluetooth label::before {
+    content: "";
+    position: absolute;
+    top: 6px;
+    left: -1px;
+    width: 25px;
+    height: 25px;
+    border: 4px solid #000;
+    border-radius: 50%; }
+  .filter-item-bluetooth input:checked + label::after {
+    content: "";
+    position: absolute;
+    top: 14px;
+    left: 7px;
+    width: 9px;
+    height: 9px;
+    background-color: #000;
+    border-radius: 50%; }
+  .filter-item-bluetooth label:hover::before,
+  .filter-item-bluetooth input:focus + label::before {
+    border-color: rgba(0, 0, 0, 0.6); }
+  .filter-item-bluetooth input:checked + label:hover::after,
+  .filter-item-bluetooth input:checked:focus + label::after {
+    background-color: rgba(0, 0, 0, 0.6); }
+  .filter-item-bluetooth label:active::before {
+    border-color: #000; }
+  .filter-item-bluetooth input:checked + label:active::after {
+    background-color: #000; }
+  .filter-item-bluetooth input:disabled + label {
+    color: #a6a6a6;
+    cursor: default; }
+  .filter-item-bluetooth input:disabled + label::before {
+    border-color: rgba(0, 0, 0, 0.25); }
+  .filter-item-bluetooth input:disabled + label::after {
+    background-color: transparent; }
+  .filter-item-bluetooth input:checked:disabled + label::after {
+    background-color: rgba(0, 0, 0, 0.25); }
+
+.filter-btn {
+  width: 100%;
+  margin-bottom: 100px;
+  padding: 8px 0; }
 
 /*# sourceMappingURL=style.css.map */

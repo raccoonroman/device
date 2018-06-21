@@ -1398,6 +1398,7 @@ input[type="radio"].visually-hidden {
 	}
 }
 
+
 .filter-sort {
 	background-image: linear-gradient(to right, #dbdbdb 31.35%, #ebebeb 31.35%);
 
@@ -1509,7 +1510,8 @@ input[type="radio"].visually-hidden {
 
 .form-filter {
 	width: 269px;
-	padding-right: 68px;
+	padding-right: 69px;
+	padding-top: 69px;
 }
 
 .filter-item {
@@ -1521,6 +1523,7 @@ input[type="radio"].visually-hidden {
 
 	.filter-item-title {
 		margin: 0;
+		margin-bottom: 18px;
 		font-family: "Gilroy Extra Bold", "Arial", sans-serif;
 		font-size: 18px;
 		line-height: 24px;
@@ -1530,7 +1533,7 @@ input[type="radio"].visually-hidden {
 
 .range-controls {
 	position: relative;
-	padding: 35px 0 8px;
+	padding: 17px 0 8px;
 
 	.scale {
 		height: 2px;
@@ -1541,11 +1544,11 @@ input[type="radio"].visually-hidden {
 			height: 2px;
 			background: #91c92f;
 		}
-	} //тут
+	}
 
 	.toggle {
 		position: absolute;
-		top: 25px;
+		top: 7px;
 		left: 0;
 		width: 20px;
 		height: 20px;
@@ -1563,16 +1566,17 @@ input[type="radio"].visually-hidden {
 	}
 
 	.toggle-min {
-		left: -5px;
+		left: -6px;
 	}
 
 	.toggle-max {
-		left: 105px;
+		left: 107px;
 	}
 }
 
 .price-controls {
 	display: flex;
+	margin-bottom: 33px;
 
 	label {
 		width: 90px;
@@ -1592,11 +1596,13 @@ input[type="radio"].visually-hidden {
 }
 
 .filter-item-color {
+	margin-bottom: 31px;
+
 
 	label {
 		position: relative;
 		display: block;
-		padding-left: 40px;
+		padding-left: 39px;
 		font-size: 14px;
 		line-height: 40px;
 		color: #000;
@@ -1606,8 +1612,8 @@ input[type="radio"].visually-hidden {
 	input + label::before {
 		content: "";
 		position: absolute;
-		top: 0;
-		left: 0;
+		top: 8px;
+		left: -2px;
 		width: 23px;
 		height: 23px;
 		border: 2px solid #000;
@@ -1617,8 +1623,8 @@ input[type="radio"].visually-hidden {
 	input:checked + label::after {
 		content: "";
 		position: absolute;
-		top: 0;
-		left: 0;
+		top: 8px;
+		left: -2px;
 		width: 27px;
 		height: 23px;
 		background: url(../img/icons/checkbox-on.svg) no-repeat;
@@ -1668,4 +1674,85 @@ input[type="radio"].visually-hidden {
 	input:checked:disabled + label::after {
 		opacity: 0.25;
 	}
+}
+
+.filter-item-bluetooth {
+	margin-bottom: 31px;
+
+	.filter-item-title {
+		margin-bottom: 18px;
+	}
+
+	label {
+		position: relative;
+		display: block;
+		padding-left: 38px;
+		font-size: 14px;
+		line-height: 40px;
+		color: #000;
+		cursor: pointer;
+	}
+
+	label::before {
+		content: "";
+		position: absolute;
+		top: 6px;
+		left: -1px;
+		width: 25px;
+		height: 25px;
+		border: 4px solid #000;
+		border-radius: 50%;
+	}
+
+	input:checked + label::after {
+		content: "";
+		position: absolute;
+		top: 14px;
+		left: 7px;
+		width: 9px;
+		height: 9px;
+		background-color: #000;
+		border-radius: 50%;
+	}
+
+	label:hover::before,
+	input:focus + label::before {
+		border-color: rgba(0, 0, 0, .6);
+	}
+
+	input:checked + label:hover::after,
+	input:checked:focus + label::after {
+		background-color: rgba(0, 0, 0, .6);
+	}
+
+	label:active::before {
+		border-color: #000;
+	}
+
+	input:checked + label:active::after {
+		background-color: #000;
+	}
+
+	input:disabled + label {
+		color: #a6a6a6;
+		cursor: default;
+	}
+
+	input:disabled + label::before {
+		border-color: rgba(0, 0, 0, .25);
+	}
+
+	input:disabled + label::after {
+		background-color: transparent;
+	}
+
+	input:checked:disabled + label::after {
+		background-color: rgba(0, 0, 0, .25);
+	}
+}
+
+.filter-btn {
+	width: 100%;
+	margin-bottom: 100px;
+	padding: 8px 0;
 }
