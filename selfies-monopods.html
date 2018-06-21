@@ -67,13 +67,78 @@
 </div>
 
 <main>
-	<div class="container">
+	<div class="catalog-container">
 		<h1 class="selfies-monopods-title">Моноподы для селфи</h1>
 		<ul class="breadcrumbs">
 			<li><a href="index.html">Главная</a></li>
 			<li><a href="#">Каталог товаров</a></li>
 			<li class="breadcrumb-current"><a>Моноподы для селфи</a></li>
 		</ul>
+	</div>
+
+	<div class="filter-sort">
+		<div class="catalog-container">
+			<p class="filter-title">Фильтр:</p>
+			<div class="filter-sort-group">
+				<p class="filter-sort-title">Сортировка:</p>
+				<ul class="filter-sort-list">
+					<li class="filter-sort-item"><a class="active">По цене</a></li>
+					<li class="filter-sort-item"><a href="#">По типу</a></li>
+					<li class="filter-sort-item"><a href="#">По популярности</a></li>
+					<li><a href="#" class="arrow arrow-top">По типу</a></li>
+					<li><a class="arrow arrow-bottom active">По популярности</a></li>
+				</ul>
+			</div>
+		</div>
+	</div>
+
+	<div class="catalog-wrapper">
+		<div class="catalog-container">
+			<form class="form-filter" action="https://echo.htmlacademy.ru" method="get">
+				<fieldset class="filter-item filter-item-range">
+						<p class="filter-item-title">Стоимость</p>
+						<div class="range-filter">
+							<div class="range-controls">
+								<div class="scale">
+									<div class="bar"></div>
+								</div>
+								<div class="toggle toggle-min"></div>
+								<div class="toggle toggle-max"></div>
+							</div>
+							<div class="price-controls">
+								<label class="min-price">от <input name="min-price" type="text" value="0"></label>
+								<label class="max-price">до <input name="max-price" type="text" value="5000"></label>
+							</div>
+						</div>
+					</fieldset>
+
+					<fieldset class="filter-item filter-item-color">
+						<p class="filter-item-title">Цвет</p>
+						<ul>
+							<li>
+								<input class="visually-hidden" type="checkbox" id="filter-black" name="black" checked disabled>
+								<label for="filter-black">Черный</label>
+							</li>
+							<li>
+								<input class="visually-hidden" type="checkbox" id="filter-white" name="white" disabled>
+								<label for="filter-white">Белый</label>
+							</li>
+							<li>
+								<input class="visually-hidden" type="checkbox" id="filter-blue" name="blue" checked>
+								<label for="filter-blue">Синий</label>
+							</li>
+							<li>
+								<input class="visually-hidden" type="checkbox" id="filter-red" name="red" checked>
+								<label for="filter-red">Красный</label>
+							</li>
+							<li>
+								<input class="visually-hidden" type="checkbox" id="filter-pink" name="pink">
+								<label for="filter-pink">Розовый</label>
+							</li>
+						</ul>
+					</fieldset>
+			</form>
+		</div>
 	</div>
 </main>
 </body>
