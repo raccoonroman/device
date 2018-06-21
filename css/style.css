@@ -1178,9 +1178,11 @@ input[type="radio"].visually-hidden {
 
 .catalog-wrapper {
   background-image: linear-gradient(to right, #ebebeb 31.35%, #fff 31.35%); }
+  .catalog-wrapper .catalog-container {
+    display: flex; }
 
 .form-filter {
-  width: 269px;
+  min-width: 269px;
   padding-right: 69px;
   padding-top: 69px; }
 
@@ -1349,7 +1351,82 @@ input[type="radio"].visually-hidden {
 
 .filter-btn {
   width: 100%;
-  margin-bottom: 100px;
   padding: 8px 0; }
+
+.monopod-list-wrapper {
+  padding: 69px 0 77px 71px; }
+
+.monopods-list {
+  margin-left: -40px;
+  display: flex;
+  flex-wrap: wrap;
+  width: 800px; }
+
+.monopod-item {
+  margin-left: 40px;
+  width: 360px; }
+  .monopod-item .img {
+    position: relative;
+    margin-bottom: 23px;
+    width: 360px;
+    height: 380px;
+    overflow: hidden; }
+    .monopod-item .img .img-hover {
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      text-align: center;
+      background-color: rgba(238, 238, 238, 0.7);
+      cursor: pointer; }
+      .monopod-item .img .img-hover .btn {
+        margin-top: 170px;
+        padding: 8px 36px 8px 40px; }
+      .monopod-item .img .img-hover .comp {
+        font-size: 13px;
+        line-height: 36px;
+        border: none;
+        color: rgba(0, 0, 0, 0.5);
+        background-color: transparent;
+        cursor: pointer; }
+        .monopod-item .img .img-hover .comp:hover, .monopod-item .img .img-hover .comp:focus {
+          color: #000; }
+        .monopod-item .img .img-hover .comp:active {
+          color: rgba(0, 0, 0, 0.2); }
+    .monopod-item .img:hover .img-hover {
+      position: absolute; }
+  .monopod-item .monopod-item-info {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 46px; }
+  .monopod-item h3 {
+    margin: 0;
+    width: 260px;
+    font-family: "Gilroy Extra Bold", "Arial", sans-serif;
+    font-size: 18px;
+    line-height: 24px;
+    letter-spacing: .2px; }
+    .monopod-item h3 a {
+      color: #000; }
+  .monopod-item p {
+    margin: 0;
+    font-family: "Gilroy Light", "Arial", sans-serif;
+    font-size: 16px;
+    line-height: 24px;
+    color: #464646; }
+  .monopod-item .new {
+    position: absolute;
+    top: 29px;
+    right: 27px;
+    width: 60px;
+    height: 60px;
+    font-family: "Gilroy Extra Bold", "Arial", sans-serif;
+    font-size: 14px;
+    line-height: 60px;
+    text-align: center;
+    text-transform: uppercase;
+    border: 2px solid rgba(0, 0, 0, 0.1);
+    border-radius: 50%;
+    color: rgba(0, 0, 0, 0.2); }
 
 /*# sourceMappingURL=style.css.map */
